@@ -25,4 +25,13 @@ console.log('2.3',doggo["favorite foods"][1]);
 doggo.printFavoriteFoods();
 
 //3.
-
+recipes = {ingredients: {"butter": "1", "sugar": "2", "flour": "3"},
+printIngredients(){
+for(ingredient in this.ingredients)
+console.log(ingredient);
+}
+}
+recipes.ingredients.ginger = "4";
+recipes["ingredients"]["brown sugar"] = recipes.ingredients.sugar;
+delete recipes.ingredients.sugar;
+recipes.printIngredients();
